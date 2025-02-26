@@ -1,0 +1,12 @@
+{
+  "header": {
+    "home": "Home",
+    "tools": "Tools",
+    "about": "About"
+  },
+  "footer": {
+    "copyright": "© 2024 Tool Page. All rights reserved.",
+    "contact": "Contact Us"
+  },
+  "tryForFree": "Try For Free"
+}

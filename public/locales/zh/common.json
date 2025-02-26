@@ -1,0 +1,12 @@
+{
+  "header": {
+    "home": "首页",
+    "tools": "工具",
+    "about": "关于"
+  },
+  "footer": {
+    "copyright": "© 2024 工具页面。保留所有权利。",
+    "contact": "联系我们"
+  },
+  "tryForFree": "免费试用"
+}

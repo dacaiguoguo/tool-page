@@ -1,8 +1,14 @@
 {
   "header": {
+    "title": "工具页面",
     "home": "首页",
+    "faq": "常见问题",
+    "blog": "博客",
     "tools": "工具",
-    "about": "关于"
+    "about": "关于",
+    "currentLang": "中文",
+    "startTranscribing": "开始转录",
+    "transcribing": "转录"
   },
   "footer": {
     "copyright": "© 2024 工具页面。保留所有权利。",

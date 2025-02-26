@@ -1,8 +1,14 @@
 {
   "header": {
+    "title": "Tool Page",
     "home": "Home",
+    "faq": "FAQ",
+    "blog": "Blog",
     "tools": "Tools",
-    "about": "About"
+    "about": "About",
+    "currentLang": "English",
+    "startTranscribing": "Start Transcribing",
+    "transcribing": "Transcribe"
   },
   "footer": {
     "copyright": "© 2024 Tool Page. All rights reserved.",

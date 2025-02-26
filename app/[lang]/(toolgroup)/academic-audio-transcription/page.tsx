@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Clock, FileText, Languages, Upload, ChevronDown, FileJson, FileSpreadsheet, Star } from 'lucide-react';
 import React from 'react';
+import { getDictionary } from '../../../dictionaries';
 
 
 
@@ -61,93 +62,9 @@ const TestimonialCard = ({ name, title, text, index }: TestimonialProps) => (
 );
 
 // Data
-const testimonials = [
-  {
-    name: "Dr. Sarah Chen",
-    title: "Research Director, Linguistics Department",
-    text: "The accuracy and speed of this platform have revolutionized our research process. We've transcribed hundreds of hours of interviews with remarkable precision."
-  },
-  {
-    name: "Prof. Michael Rodriguez",
-    title: "Department of Sociology",
-    text: "The multilingual support has been invaluable for our international research projects. The timestamp feature makes it incredibly easy to reference specific parts of interviews."
-  },
-  {
-    name: "Dr. Emily Thompson",
-    title: "Educational Psychology Researcher",
-    text: "This tool has significantly reduced the time we spend on transcription, allowing us to focus more on analysis and research outcomes."
-  },
-  {
-    name: "Prof. James Wilson",
-    title: "Department of Anthropology",
-    text: "The quality of transcriptions for field interviews is exceptional. The platform handles background noise and accents remarkably well."
-  },
-  {
-    name: "Dr. Lisa Kumar",
-    title: "Clinical Research Coordinator",
-    text: "The automated formatting and export options save us countless hours in post-processing. It's become an essential tool in our research workflow."
-  },
-  {
-    name: "Prof. David Martinez",
-    title: "Department of History",
-    text: "Being able to transcribe historical recordings in multiple languages has opened up new possibilities for our archival research."
-  },
-  {
-    name: "Dr. Rachel Foster",
-    title: "Qualitative Research Specialist",
-    text: "The platform's accuracy with technical terminology is impressive. It's clearly been well-trained on academic content."
-  },
-  {
-    name: "Prof. Thomas Yang",
-    title: "Department of Psychology",
-    text: "The timestamp integration makes it incredibly easy to validate transcriptions against source recordings. A fantastic tool for ensuring research accuracy."
-  },
-  {
-    name: "Dr. Anna Kowalski",
-    title: "Research Methodology Professor",
-    text: "This platform has become an integral part of our research methodology courses. Students particularly appreciate the user-friendly interface."
-  },
-  {
-    name: "Prof. Robert Bennett",
-    title: "Department of Political Science",
-    text: "The ability to handle long recordings and maintain consistency throughout has been crucial for our interview-based research projects."
-  }
-];
+const testimonials = dict.testimonials.items;
 
-const faqs = [
-  {
-    question: "What file formats are supported?",
-    answer: "Our platform supports a wide range of audio formats including MP3, WAV, M4A, AAC, and WMA. Files can be up to 10 hours long or 5GB in size, making it suitable for lengthy academic recordings."
-  },
-  {
-    question: "How accurate is the transcription?",
-    answer: "We achieve 99.8% accuracy across 134+ languages, thanks to OpenAI's Whisper technology. The accuracy is particularly high for clear academic speech and professional recordings."
-  },
-  {
-    question: "What languages are supported?",
-    answer: "Our platform supports over 100 languages with high accuracy, including major academic languages such as English, Mandarin, Spanish, German, French, and Japanese, among many others."
-  },
-  {
-    question: "How are timestamps implemented?",
-    answer: "Timestamps are automatically generated for each paragraph, making it easy to navigate between your transcript and audio. This feature is particularly useful for citation and verification purposes."
-  },
-  {
-    question: "What export formats are available?",
-    answer: "You can export your transcripts in multiple formats including TXT, DOC, PDF, and SRT. Each format maintains proper formatting and includes timestamps where applicable."
-  },
-  {
-    question: "Is my data secure?",
-    answer: "Yes, we implement enterprise-grade security measures. All uploads are encrypted, and we adhere to strict academic data protection standards. Files are automatically deleted after processing if requested."
-  },
-  {
-    question: "How long does transcription take?",
-    answer: "Our system transcribes short files in seconds and longer files in just minutes with industry-leading speed."
-  },
-  {
-    question: "Do you support batch processing?",
-    answer: "Yes, you can upload multiple files simultaneously. Our system will process them in parallel, making it efficient for large-scale academic research projects."
-  }
-];
+const faqs = dict.faqs.items;
 
 const universityLogos = [
   'https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=100&fit=crop&q=80',
@@ -167,7 +84,8 @@ export type PageProps = {
 }
 
 
-export default async function Page({ params }: PageProps) {
+export default async function Page({ params: { lang } }: PageProps) {
+  const dict = await getDictionary(lang, 'academic-audio-transcription');
   return (
     <>
       <main className="min-h-screen pt-16">
@@ -176,13 +94,13 @@ export default async function Page({ params }: PageProps) {
           <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
           <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-              Academic Audio Transcription
+              {dict.hero.title}
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
-              Transform your academic recordings into precise, formatted transcripts with our advanced AI-powered platform. Supporting 134+ languages with 99.8% accuracy for research interviews, lectures, and academic discussions.
+              {dict.hero.description}
             </p>
             <a href="/transcribe" className="bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all inline-block">
-              Start Free Trial
+              {dict.hero.startButton}
             </a>
           </div>
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">

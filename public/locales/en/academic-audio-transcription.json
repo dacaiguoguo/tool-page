@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "title": "Academic Audio Transcription",
+    "description": "Transform your academic recordings into precise, formatted transcripts with our advanced AI-powered platform. Supporting 134+ languages with 99.8% accuracy for research interviews, lectures, and academic discussions.",
+    "startButton": "Start Free Trial"
+  },
+  "stats": {
+    "hoursTranscribed": "Hours Transcribed",
+    "supportedLanguages": "Supported Languages",
+    "accuracyRate": "Accuracy Rate"
+  },
+  "features": {
+    "title": "Why Choose Our Platform",
+    "cards": {
+      "speed": {
+        "title": "Lightning Fast Processing",
+        "description": "Process hours of audio in minutes with our optimized transcription engine"
+      },
+      "accuracy": {
+        "title": "High Accuracy",
+        "description": "99.8% accuracy rate for clear academic speech across 134+ languages"
+      },
+      "format": {
+        "title": "Multiple Export Formats",
+        "description": "Export your transcripts in various formats including TXT, DOC, PDF, and SRT"
+      },
+      "timestamps": {
+        "title": "Smart Timestamps",
+        "description": "Automatic timestamp generation for easy audio-transcript synchronization"
+      }
+    }
+  },
+  "testimonials": {
+    "items": [
+      {
+        "name": "Dr. Sarah Chen",
+        "title": "Research Director, Linguistics Department",
+        "text": "The accuracy and speed of this platform have revolutionized our research process. We've transcribed hundreds of hours of interviews with remarkable precision."
+      },
+      {
+        "name": "Prof. Michael Rodriguez",
+        "title": "Department of Sociology",
+        "text": "The multilingual support has been invaluable for our international research projects. The timestamp feature makes it incredibly easy to reference specific parts of interviews."
+      },
+      {
+        "name": "Dr. Emily Thompson",
+        "title": "Educational Psychology Researcher",
+        "text": "This tool has significantly reduced the time we spend on transcription, allowing us to focus more on analysis and research outcomes."
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What file formats are supported?",
+        "answer": "Our platform supports a wide range of audio formats including MP3, WAV, M4A, AAC, and WMA. Files can be up to 10 hours long or 5GB in size, making it suitable for lengthy academic recordings."
+      },
+      {
+        "question": "How accurate is the transcription?",
+        "answer": "We achieve 99.8% accuracy across 134+ languages, thanks to OpenAI's Whisper technology. The accuracy is particularly high for clear academic speech and professional recordings."
+      },
+      {
+        "question": "What languages are supported?",
+        "answer": "Our platform supports over 100 languages with high accuracy, including major academic languages such as English, Mandarin, Spanish, German, French, and Japanese, among many others."
+      },
+      {
+        "question": "How are timestamps implemented?",
+        "answer": "Timestamps are automatically generated for each paragraph, making it easy to navigate between your transcript and audio. This feature is particularly useful for citation and verification purposes."
+      }
+    ]
+  }
+}

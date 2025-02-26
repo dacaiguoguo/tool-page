@@ -25,9 +25,9 @@ export default async function ToolGroupLayout(props: Props) {
   return (
     <>
       <Header currentPathname="" dict={dict} lang={lang} />
-      <main className="container mx-auto px-4 py-8">
+      <main>
         {children}
-        <div className="text-center mt-8">
+        <div>
           <TryForFreeButton text={dict.tryForFree} />
         </div>
       </main>

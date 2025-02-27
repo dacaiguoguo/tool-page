@@ -61,12 +61,15 @@ const TestimonialCard = ({ name, title, text, index }: TestimonialProps) => (
 
 
 
-export type PageProps = {
-  params: { lang: string }
+type Props = {
+  params: Promise<{ lang: string }>
 }
 
-export default async function Page({ params: { lang } }: PageProps) {
-  const dict = await getDictionary(lang, 'academic-audio-transcription');
+
+export default async function Page(props: Props) {
+  const params = await props.params;
+
+  const dict = await getDictionary(params.lang, 'academic-audio-transcription');
   // Data
   const testimonials = dict.testimonials.items;
 

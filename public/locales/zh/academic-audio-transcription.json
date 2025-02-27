@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "title": "学术音频转录",
+    "description": "通过我们先进的AI驱动平台，将您的学术录音转换为精确、格式化的文本。支持134多种语言，为研究访谈、讲座和学术讨论提供99.8%的准确率。",
+    "startButton": "开始免费试用"
+  },
+  "stats": {
+    "hoursTranscribed": "已转录小时数",
+    "hoursTranscribedValue": "6,358,298",
+    "supportedLanguages": "支持的语言数",
+    "supportedLanguagesValue": "100+",
+    "accuracyRate": "准确率",
+    "accuracyRateValue": "99.8%"
+  },
+  "features": {
+    "title": "全面的学术卓越功能",
+    "cards": {
+      "speed": {
+        "title": "快速处理",
+        "description": "通过我们先进的AI技术，快速处理长时间的学术录音。轻松处理长达10小时或5GB大小的文件。"
+      },
+      "accuracy": {
+        "title": "智能格式化",
+        "description": "自动段落结构和格式优化，专为学术内容设计，使您在研究中更容易审阅和引用。"
+      },
+      "format": {
+        "title": "多语言支持",
+        "description": "支持100多种语言，具有高准确率，非常适合国际研究和全球学术合作。"
+      },
+      "timestamps": {
+        "title": "灵活的文件处理",
+        "description": "上传各种音频格式，包括MP3、WAV、M4A等。适用于不同的录音设备和情况。"
+      },
+      "export": {
+        "title": "多种导出格式",
+        "description": "以各种格式导出您的文本，包括TXT、DOC、PDF和带时间戳的SRT，轻松集成到您的研究工作流程中。"
+      },
+      "integration": {
+        "title": "时间戳集成",
+        "description": "为每个段落提供精确的时间戳，使您能够在文本和音频录音之间轻松导航。"
+      }
+    }
+  },
+  "trustedBy": {
+    "title": "受到领先学术机构的信任"
+  },
+  "universityLogos": [
+    "https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1560523159-6b681a1e1852?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1592494804071-faea15d93a8a?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1554475900-0a0350e3fc7b?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=200&h=100&fit=crop&q=80"
+  ],
+  "testimonials": {
+    "title": "研究人员怎么说",
+    "items": [
+      {
+        "name": "陈博士",
+        "title": "语言学系研究主任",
+        "text": "这个平台的准确性和速度彻底改变了我们的研究过程。我们已经以非凡的精确度转录了数百小时的访谈。"
+      },
+      {
+        "name": "罗德里格斯教授",
+        "title": "社会学系",
+        "text": "多语言支持对我们的国际研究项目非常宝贵。时间戳功能使我们能够非常容易地引用访谈的特定部分。"
+      },
+      {
+        "name": "汤普森博士",
+        "title": "教育心理学研究员",
+        "text": "这个工具显著减少了我们在转录上花费的时间，使我们能够更多地关注分析和研究成果。"
+      }
+    ]
+  },
+  "whisperTech": {
+    "title": "由Whisper技术驱动",
+    "description": "我们的平台利用OpenAI最先进的Whisper技术，确保在多种语言和口音中提供最高质量的转录，具有卓越的准确性。这个先进的AI模型已经通过数千小时的学术内容训练，为研究和教育目的提供卓越的结果。"
+  },
+  "faqs": {
+    "title": "常见问题",
+    "items": [
+      {
+        "question": "支持哪些文件格式？",
+        "answer": "我们的平台支持多种音频格式，包括MP3、WAV、M4A、AAC和WMA。文件可以长达10小时或5GB大小，非常适合长时间的学术录音。"
+      },
+      {
+        "question": "转录的准确率如何？",
+        "answer": "得益于OpenAI的Whisper技术，我们在134多种语言中实现了99.8%的准确率。对于清晰的学术演讲和专业录音，准确率特别高。"
+      },
+      {
+        "question": "支持哪些语言？",
+        "answer": "我们的平台以高准确率支持100多种语言，包括主要学术语言如英语、普通话、西班牙语、德语、法语和日语等。"
+      },
+      {
+        "question": "时间戳是如何实现的？",
+        "answer": "时间戳会自动为每个段落生成，使您能够在文本和音频之间轻松导航。这个功能对引用和验证目的特别有用。"
+      }
+    ]
+  },
+  "cta": {
+    "title": "今天开始转录",
+    "description": "加入数千名信任我们平台满足其转录需求的研究人员和学者。",
+    "buttonText": "开始免费试用"
+  }
+}

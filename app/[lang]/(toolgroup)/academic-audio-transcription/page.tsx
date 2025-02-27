@@ -3,8 +3,6 @@ import { Clock, FileText, Languages, Upload, ChevronDown, FileJson, FileSpreadsh
 import React from 'react';
 import { getDictionary } from '../../../dictionaries';
 
-
-
 // Component definitions
 interface FAQProps {
   question: string;
@@ -61,31 +59,20 @@ const TestimonialCard = ({ name, title, text, index }: TestimonialProps) => (
   </div>
 );
 
-// Data
-const testimonials = dict.testimonials.items;
 
-const faqs = dict.faqs.items;
-
-const universityLogos = [
-  'https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=100&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=200&h=100&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1592280771190-3e2e4d571952?w=200&h=100&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=200&h=100&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1560523159-6b681a1e1852?w=200&h=100&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1592494804071-faea15d93a8a?w=200&h=100&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1554475900-0a0350e3fc7b?w=200&h=100&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?w=200&h=100&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=200&h=100&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=200&h=100&fit=crop&q=80'
-];
 
 export type PageProps = {
   params: { lang: string }
 }
 
-
 export default async function Page({ params: { lang } }: PageProps) {
   const dict = await getDictionary(lang, 'academic-audio-transcription');
+  // Data
+  const testimonials = dict.testimonials.items;
+
+  const faqs = dict.faqs.items;
+
+  const universityLogos = dict.universityLogos;
   return (
     <>
       <main className="min-h-screen pt-16">
@@ -113,16 +100,16 @@ export default async function Page({ params: { lang } }: PageProps) {
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">6,358,298</h3>
-                <p className="text-gray-300 mt-2">Hours Transcribed</p>
+                <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">{dict.stats.hoursTranscribedValue}</h3>
+                <p className="text-gray-300 mt-2">{dict.stats.hoursTranscribed}</p>
               </div>
               <div className="text-center">
-                <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">100+</h3>
-                <p className="text-gray-300 mt-2">Languages Supported</p>
+                <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">{dict.stats.supportedLanguagesValue}</h3>
+                <p className="text-gray-300 mt-2">{dict.stats.supportedLanguages}</p>
               </div>
               <div className="text-center">
-                <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">99.8%</h3>
-                <p className="text-gray-300 mt-2">Accuracy Rate</p>
+                <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">{dict.stats.accuracyRateValue}</h3>
+                <p className="text-gray-300 mt-2">{dict.stats.accuracyRate}</p>
               </div>
             </div>
           </div>
@@ -131,37 +118,37 @@ export default async function Page({ params: { lang } }: PageProps) {
         {/* Features Section */}
         <section className="py-20 bg-gradient-to-br from-purple-500 to-indigo-500">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-16 text-white">Comprehensive Features for Academic Excellence</h2>
+            <h2 className="text-4xl font-bold text-center mb-16 text-white">{dict.features.title}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <FeatureCard
                 icon={<Clock className="w-8 h-8 text-indigo-600" />}
-                title="Rapid Processing"
-                description="Process long academic recordings quickly with our advanced AI technology. Handle files up to 10 hours long or 5GB in size with ease."
+                title={dict.features.cards.speed.title}
+                description={dict.features.cards.speed.description}
               />
               <FeatureCard
                 icon={<FileText className="w-8 h-8 text-indigo-600" />}
-                title="Intelligent Formatting"
-                description="Automatic paragraph structuring and formatting optimized for academic content, making it easier to review and cite in your research."
+                title={dict.features.cards.accuracy.title}
+                description={dict.features.cards.accuracy.description}
               />
               <FeatureCard
                 icon={<Languages className="w-8 h-8 text-indigo-600" />}
-                title="Multilingual Support"
-                description="Support for over 100 languages with high accuracy, perfect for international research and global academic collaboration."
+                title={dict.features.cards.format.title}
+                description={dict.features.cards.format.description}
               />
               <FeatureCard
                 icon={<Upload className="w-8 h-8 text-indigo-600" />}
-                title="Flexible File Handling"
-                description="Upload various audio formats including MP3, WAV, M4A, and more. Perfect for different recording devices and situations."
+                title={dict.features.cards.timestamps.title}
+                description={dict.features.cards.timestamps.description}
               />
               <FeatureCard
                 icon={<FileJson className="w-8 h-8 text-indigo-600" />}
-                title="Multiple Export Formats"
-                description="Export your transcripts in various formats including TXT, DOC, PDF, and SRT with timestamps for easy integration into your research workflow."
+                title={dict.features.cards.export.title}
+                description={dict.features.cards.export.description}
               />
               <FeatureCard
                 icon={<FileSpreadsheet className="w-8 h-8 text-indigo-600" />}
-                title="Timestamp Integration"
-                description="Precise timestamps for every paragraph, making it easy to navigate between your transcript and audio recording."
+                title={dict.features.cards.integration.title}
+                description={dict.features.cards.integration.description}
               />
             </div>
           </div>
@@ -170,7 +157,7 @@ export default async function Page({ params: { lang } }: PageProps) {
         {/* Trusted By Section */}
         <section className="py-20 bg-gradient-to-br from-indigo-900 to-purple-900 text-white">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-16">Trusted by Leading Academic Institutions</h2>
+            <h2 className="text-4xl font-bold text-center mb-16">{dict.trustedBy.title}</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {universityLogos.map((logo, i) => (
                 <div key={i} className="flex items-center justify-center p-4 bg-white/10 backdrop-blur-sm rounded-lg">
@@ -188,7 +175,7 @@ export default async function Page({ params: { lang } }: PageProps) {
         {/* Testimonials Section */}
         <section className="py-20 bg-gradient-to-br from-purple-500 to-pink-500">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-16 text-white">What Researchers Say</h2>
+            <h2 className="text-4xl font-bold text-center mb-16 text-white">{dict.testimonials.title}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {testimonials.map((testimonial, i) => (
                 <TestimonialCard key={i} {...testimonial} index={i} />
@@ -207,11 +194,9 @@ export default async function Page({ params: { lang } }: PageProps) {
                 className="h-12 invert"
               />
             </div>
-            <h2 className="text-4xl font-bold mb-8">Powered by Whisper Technology</h2>
+            <h2 className="text-4xl font-bold mb-8">{dict.whisperTech.title}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform leverages OpenAI's state-of-the-art Whisper technology, ensuring the highest quality transcriptions
-              with remarkable accuracy across multiple languages and accents. This advanced AI model has been trained on
-              thousands of hours of academic content to deliver superior results for research and educational purposes.
+              {dict.whisperTech.description}
             </p>
           </div>
         </section>
@@ -219,7 +204,7 @@ export default async function Page({ params: { lang } }: PageProps) {
         {/* FAQ Section */}
         <section className="py-20 bg-gradient-to-br from-purple-500 to-indigo-500">
           <div className="max-w-4xl mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-16 text-white">Frequently Asked Questions</h2>
+            <h2 className="text-4xl font-bold text-center mb-16 text-white">{dict.faqs.title}</h2>
             <div className="space-y-6">
               {faqs.map((faq, i) => (
                 <FAQItem key={i} {...faq} />
@@ -231,12 +216,12 @@ export default async function Page({ params: { lang } }: PageProps) {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-8">Start Transcribing Today</h2>
+            <h2 className="text-4xl font-bold mb-8">{dict.cta.title}</h2>
             <p className="text-xl mb-8">
-              Join thousands of researchers and academics who trust our platform for their transcription needs.
+              {dict.cta.description}
             </p>
             <a href="/transcribe" className="bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all inline-block">
-              Begin Free Trial
+              {dict.cta.buttonText}
             </a>
           </div>
         </section>

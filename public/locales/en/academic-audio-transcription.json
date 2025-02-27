@@ -6,31 +6,58 @@
   },
   "stats": {
     "hoursTranscribed": "Hours Transcribed",
-    "supportedLanguages": "Supported Languages",
-    "accuracyRate": "Accuracy Rate"
+    "hoursTranscribedValue": "6,358,298",
+    "supportedLanguages": "Languages Supported",
+    "supportedLanguagesValue": "100+",
+    "accuracyRate": "Accuracy Rate",
+    "accuracyRateValue": "99.8%"
   },
   "features": {
-    "title": "Why Choose Our Platform",
+    "title": "Comprehensive Features for Academic Excellence",
     "cards": {
       "speed": {
-        "title": "Lightning Fast Processing",
-        "description": "Process hours of audio in minutes with our optimized transcription engine"
+        "title": "Rapid Processing",
+        "description": "Process long academic recordings quickly with our advanced AI technology. Handle files up to 10 hours long or 5GB in size with ease."
       },
       "accuracy": {
-        "title": "High Accuracy",
-        "description": "99.8% accuracy rate for clear academic speech across 134+ languages"
+        "title": "Intelligent Formatting",
+        "description": "Automatic paragraph structuring and formatting optimized for academic content, making it easier to review and cite in your research."
       },
       "format": {
-        "title": "Multiple Export Formats",
-        "description": "Export your transcripts in various formats including TXT, DOC, PDF, and SRT"
+        "title": "Multilingual Support",
+        "description": "Support for over 100 languages with high accuracy, perfect for international research and global academic collaboration."
       },
       "timestamps": {
-        "title": "Smart Timestamps",
-        "description": "Automatic timestamp generation for easy audio-transcript synchronization"
+        "title": "Flexible File Handling",
+        "description": "Upload various audio formats including MP3, WAV, M4A, and more. Perfect for different recording devices and situations."
+      },
+      "export": {
+        "title": "Multiple Export Formats",
+        "description": "Export your transcripts in various formats including TXT, DOC, PDF, and SRT with timestamps for easy integration into your research workflow."
+      },
+      "integration": {
+        "title": "Timestamp Integration",
+        "description": "Precise timestamps for every paragraph, making it easy to navigate between your transcript and audio recording."
       }
     }
   },
+  "trustedBy": {
+    "title": "Trusted by Leading Academic Institutions"
+  },
+  "universityLogos": [
+    "https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1560523159-6b681a1e1852?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1592494804071-faea15d93a8a?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1554475900-0a0350e3fc7b?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=200&h=100&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=200&h=100&fit=crop&q=80"
+  ],
   "testimonials": {
+    "title": "What Researchers Say",
     "items": [
       {
         "name": "Dr. Sarah Chen",
@@ -48,6 +75,10 @@
         "text": "This tool has significantly reduced the time we spend on transcription, allowing us to focus more on analysis and research outcomes."
       }
     ]
+  },
+  "whisperTech": {
+    "title": "Powered by Whisper Technology",
+    "description": "Our platform leverages OpenAI's state-of-the-art Whisper technology, ensuring the highest quality transcriptions with remarkable accuracy across multiple languages and accents. This advanced AI model has been trained on thousands of hours of academic content to deliver superior results for research and educational purposes."
   },
   "faqs": {
     "title": "Frequently Asked Questions",
@@ -69,5 +100,10 @@
         "answer": "Timestamps are automatically generated for each paragraph, making it easy to navigate between your transcript and audio. This feature is particularly useful for citation and verification purposes."
       }
     ]
+  },
+  "cta": {
+    "title": "Start Transcribing Today",
+    "description": "Join thousands of researchers and academics who trust our platform for their transcription needs.",
+    "buttonText": "Begin Free Trial"
   }
 }

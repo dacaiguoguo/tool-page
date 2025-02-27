@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { Clock, FileText, Languages, Upload, ChevronDown, FileJson, FileSpreadsheet, Star } from 'lucide-react';
 import React from 'react';
 import { getDictionary } from '../../../dictionaries';
+import Link from 'next/link';
+import Image from 'next/image';
 
 // Component definitions
 interface FAQProps {
@@ -40,9 +42,11 @@ interface TestimonialProps {
 const TestimonialCard = ({ name, title, text, index }: TestimonialProps) => (
   <div className="bg-white/80 backdrop-blur-sm dark:bg-gray-900/80 p-6 rounded-lg shadow-lg hover:transform hover:scale-105 transition-all duration-300">
     <div className="flex items-center mb-4">
-      <img
+      <Image
         src={`https://i.pravatar.cc/150?img=${index + 1}`}
         alt={name}
+        width={48}
+        height={48}
         className="w-12 h-12 rounded-full mr-4"
       />
       <div>
@@ -68,8 +72,10 @@ type Props = {
 
 export default async function Page(props: Props) {
   const params = await props.params;
+  const lang = params.lang;
+  const pathPefix = lang == 'en' ? '' : `/${lang}`;
 
-  const dict = await getDictionary(params.lang, 'academic-audio-transcription');
+  const dict = await getDictionary(lang, 'academic-audio-transcription');
   // Data
   const testimonials = dict.testimonials.items;
 
@@ -89,9 +95,9 @@ export default async function Page(props: Props) {
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
               {dict.hero.description}
             </p>
-            <a href="/transcribe" className="bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all inline-block">
+            <Link href={`${pathPefix}/transcribe`} className="bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all inline-block">
               {dict.hero.startButton}
-            </a>
+            </Link>
           </div>
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
             <ChevronDown className="w-8 h-8 text-white" />
@@ -164,9 +170,11 @@ export default async function Page(props: Props) {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {universityLogos.map((logo, i) => (
                 <div key={i} className="flex items-center justify-center p-4 bg-white/10 backdrop-blur-sm rounded-lg">
-                  <img
+                  <Image
                     src={logo}
                     alt={`University ${i + 1}`}
+                    width={200}
+                    height={100}
                     className="max-h-12 opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
@@ -191,9 +199,11 @@ export default async function Page(props: Props) {
         <section className="py-20 bg-gradient-to-br from-gray-900 to-indigo-900 text-white">
           <div className="max-w-6xl mx-auto px-4 text-center">
             <div className="flex items-center justify-center mb-8">
-              <img
+              <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg"
                 alt="OpenAI Logo"
+                width={48}
+                height={48}
                 className="h-12 invert"
               />
             </div>
